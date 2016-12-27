@@ -12,7 +12,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jargon.version>4.0.2.6-RELEASE</jargon.version>
 		<spring.core.version>3.1.0.RELEASE</spring.core.version>
-		<spring.statemachine.version>1.2.0-RELEASE</spring.statemachine.version>
+		<spring.statemachine.version>1.2.0.RELEASE</spring.statemachine.version>
+		<spring.boot.version>1.4.3.RELEASE</spring.boot.version>		
 		<java.version>1.8</java.version>
 	</properties>
 	<developers>
@@ -59,6 +60,19 @@
 			<id>jboss</id>
 			<name>jboss.repository</name>
 			<url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+				<checksumPolicy>fail</checksumPolicy>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>spring</id>
+			<name>spring.repository</name>
+			<url>http://repo.spring.io/libs-release/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
