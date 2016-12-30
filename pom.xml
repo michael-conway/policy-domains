@@ -8,12 +8,13 @@
 	<packaging>pom</packaging>
 	<name>Policy Domains</name>
 	<description>Policy Domains Framework and OAIS prototype</description>
+	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jargon.version>4.0.2.6-RELEASE</jargon.version>
-		<spring.core.version>3.1.0.RELEASE</spring.core.version>
+		<spring.core.version>4.3.5.RELEASE</spring.core.version>
 		<spring.statemachine.version>1.2.0.RELEASE</spring.statemachine.version>
-		<spring.boot.version>1.4.3.RELEASE</spring.boot.version>		
+		<spring.boot.version>1.1.12.RELEASE</spring.boot.version>		
 		<java.version>1.8</java.version>
 	</properties>
 	<developers>
@@ -145,17 +146,17 @@
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-api</artifactId>
-				<version>1.5.10</version>
+				<version>1.7.22</version>
 			</dependency>
 			<dependency>
 				<groupId>log4j</groupId>
 				<artifactId>log4j</artifactId>
-				<version>1.2.16</version>
+				<version>1.2.17</version>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-log4j12</artifactId>
-				<version>1.5.10</version>
+				<version>1.7.22</version>
 			</dependency>
 			<dependency>
 				<groupId>org.mockito</groupId>
@@ -182,6 +183,11 @@
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-context</artifactId>
 				<version>${spring.core.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.shell</groupId>
+				<artifactId>spring-shell</artifactId>
+				<version>1.2.0.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>

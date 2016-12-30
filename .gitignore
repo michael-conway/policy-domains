@@ -2,3 +2,5 @@
 .classpath
 **/target
 **/*.jar
+.settings
+*.log
