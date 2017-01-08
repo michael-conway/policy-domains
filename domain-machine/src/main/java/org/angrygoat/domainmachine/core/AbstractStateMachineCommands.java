@@ -38,9 +38,6 @@ public class AbstractStateMachineCommands<S, E> implements CommandMarker {
 		return stateMachine;
 	}
 
-	@Autowired
-	@Qualifier("stateChartModel")
-	private String stateChartModel;
 
 	@CliCommand(value = "sm state", help = "Prints current state")
 	public String state() {
@@ -62,11 +59,6 @@ public class AbstractStateMachineCommands<S, E> implements CommandMarker {
 	public String stop() {
 		stateMachine.stop();
 		return "State machine stopped";
-	}
-
-	@CliCommand(value = "sm print", help = "Print state machine")
-	public String print() {
-		return stateChartModel;
 	}
 
 	@CliCommand(value = "sm variables", help = "Prints extended state variables")

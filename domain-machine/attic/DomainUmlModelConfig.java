@@ -17,15 +17,8 @@ import org.springframework.statemachine.uml.UmlStateMachineModelFactory;
  *
  */
 public class DomainUmlModelConfig extends StateMachineConfigurerAdapter<String, String> {
-	private String modelPath;
-	public String getModelPath() {
-		return modelPath;
-	}
-
-	public void setModelPath(String modelPath) {
-		this.modelPath = modelPath;
-	}
-
+	private PolicyDomainConfig policyDomainConfig;
+	
 	public static final Logger log = LoggerFactory
 			.getLogger(DomainUmlModelConfig.class);
 	

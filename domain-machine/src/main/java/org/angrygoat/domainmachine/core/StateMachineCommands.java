@@ -15,8 +15,6 @@
  */
 package org.angrygoat.domainmachine.core;
 
-import org.angrygoat.domainmachine.core.CoreStateMachine.Events;
-import org.angrygoat.domainmachine.core.CoreStateMachine.States;
 import org.springframework.shell.core.annotation.CliCommand;
 import org.springframework.shell.core.annotation.CliOption;
 import org.springframework.stereotype.Component;
@@ -24,10 +22,10 @@ import org.springframework.stereotype.Component;
 
 
 @Component
-public class StateMachineCommands extends AbstractStateMachineCommands<States, Events> {
+public class StateMachineCommands extends AbstractStateMachineCommands<String, String> {
 
 	@CliCommand(value = "sm event", help = "Sends an event to a state machine")
-	public String event(@CliOption(key = { "", "event" }, mandatory = true, help = "The event") final Events event) {
+	public String event(@CliOption(key = { "", "event" }, mandatory = true, help = "The event") final String event) {
 		getStateMachine().sendEvent(event);
 		return "Event " + event + " send";
 	}
