@@ -12,17 +12,19 @@ import org.springframework.statemachine.config.builders.StateMachineStateConfigu
 import org.springframework.statemachine.config.builders.StateMachineTransitionConfigurer;
 
 
-public class CoreStateMachine  {
+public class CoreStateMachine<S,E>  {
 
 
 	//tag::snippetA[]
 		@Configuration
 		@EnableStateMachine
 		static class StateMachineConfig
-				extends EnumStateMachineConfigurerAdapter<States, Events> {
+				extends EnumStateMachineConfigurerAdapter<S, E> {
+			
+			private AbstractPolicyDomainProvider<S,E> policyDomainProvider;
 
 			@Override
-			public void configure(StateMachineStateConfigurer<States, Events> states)
+			public void configure(StateMachineStateConfigurer<S, E> states)
 					throws Exception {
 				states
 					.withStates()
@@ -31,7 +33,7 @@ public class CoreStateMachine  {
 			}
 
 			@Override
-			public void configure(StateMachineTransitionConfigurer<States, Events> transitions)
+			public void configure(StateMachineTransitionConfigurer<S, E> transitions)
 					throws Exception {
 				transitions
 					.withExternal()
@@ -46,19 +48,6 @@ public class CoreStateMachine  {
 			}
 
 		}
-	//end::snippetA[]
-
-	//tag::snippetB[]
-		public enum States {
-		    LOCKED, UNLOCKED
-		}
-	//end::snippetB[]
-
-	//tag::snippetC[]
-		public enum Events {
-		    COIN, PUSH
-		}
-	//end::snippetC[]
 
 		public static void main(String[] args) throws Exception {
 			Bootstrap.main(args);

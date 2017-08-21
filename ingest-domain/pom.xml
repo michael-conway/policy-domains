@@ -7,9 +7,9 @@
 		<artifactId>policy-domains</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>domain-machine</artifactId>
-	<name>Domain Machine</name>
-	<description>Supporting foundation classes for policy-domain system</description>
+	<artifactId>ingest-domain</artifactId>
+	<name>ingest domain</name>
+	<description>ingest implementation of a policy domain</description>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -30,24 +30,10 @@
 			<version>${spring.statemachine.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-			<version>${spring.boot.version}</version>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.statemachine</groupId>
 			<artifactId>spring-statemachine-test</artifactId>
 			<version>${spring.statemachine.version}</version>
 			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.shell</groupId>
-			<artifactId>spring-shell</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<version>${spring.boot.version}</version>
 		</dependency>
 	</dependencies>
 	<build>
