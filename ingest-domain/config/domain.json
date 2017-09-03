@@ -1,0 +1,25 @@
+{
+ "domainName": "ingest",
+ "regions":[
+   {"regionName":"landingZone",
+    "parentPath":"landingZone",
+    "permittedAgent":["depositor:write", "ingestagent:read"]
+   },
+   {"regionName":"sipPreValidate",
+    "parentPath":"sipPreValidate",
+    "permittedAgent":["ingestagent:write"]
+   },
+   {"regionName":"sipQuarantine",
+   "parentPath":"quarantine",
+    "permittedAgent":["ingestagent:write"]
+   },
+   {"regionName":"aipAssembly",
+    "parentPath":"aipAssembly",
+    "permittedAgent":["ingestagent:write"]
+   },
+   {"regionName":"aipPickup",
+   "parentPath":"aipPickup",
+   "permittedAgent":["ingestagent:write","aipagent:read"]
+   }
+   ]
+}
