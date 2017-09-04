@@ -31,6 +31,5 @@ class PdTest(unittest.TestCase):
         self.assertTrue(pdm.connection,"connection not created")
 
 
-
 if __name__ == "__main__":
     unittest.main()
