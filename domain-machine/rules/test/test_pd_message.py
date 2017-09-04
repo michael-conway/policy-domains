@@ -11,23 +11,25 @@ logging.config.fileConfig("logging_config.ini")
 logger = logging.getLogger(__name__)
 logger.info("Hi from init")
 
-
-
 class PdTest(unittest.TestCase):
 
     def setUp(self):
         pass
 
-    def test_foo(self):
-        pass
 
     def test_connect(self):
         """testconnect"""
-        print("in test")
         logger.info("testConnect()")
-        pdm = pd_message.PdMessage()
-        connection = pdm.connect("localhost")
-        self.assertTrue(connection,"connection not created")
+        pdm = pd_message.PdMessage("localhost")
+        pdm.connect()
+        self.assertTrue(pdm.connection,"connection not created")
+
+    def test_setup(self):
+        """test call setup with localhost"""
+        pdm = pd_message.PdMessage("localhost")
+        pdm.setup("testdomain","testexchange")
+        self.assertTrue(pdm.connection,"connection not created")
+
 
 
 if __name__ == "__main__":
