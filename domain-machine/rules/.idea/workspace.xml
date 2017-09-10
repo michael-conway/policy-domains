@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4a42034-c008-4120-8c7d-4b8d4afba10d" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../ingest-domain/rules/src/ingest-core.py" afterPath="$PROJECT_DIR$/../../ingest-domain/rules/src/core.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core.py" afterPath="$PROJECT_DIR$/src/core.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/init_domain.py" afterPath="$PROJECT_DIR$/src/init_domain.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../ingest-domain/rules/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../ingest-domain/rules/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../ingest-domain/rules/src/core.py" afterPath="$PROJECT_DIR$/../../ingest-domain/rules/src/core.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../ingest-domain/rules/src/ingest_policy_domain.py" afterPath="$PROJECT_DIR$/../../ingest-domain/rules/src/ingest_policy_domain.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,7 +21,7 @@
       <file leaf-file-name="test_pd_message.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_pd_message.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
+            <state relative-caret-position="360">
               <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
                 <element signature="e#31#45#0" expanded="true" />
@@ -25,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="core.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="core.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/core.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3168">
-              <caret line="176" column="4" lean-forward="false" selection-start-line="176" selection-start-column="4" selection-end-line="176" selection-end-column="4" />
+            <state relative-caret-position="162">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -40,7 +45,7 @@
       <file leaf-file-name="init_domain.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/init_domain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
+            <state relative-caret-position="306">
               <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="e#48#65#0" expanded="true" />
@@ -52,8 +57,8 @@
       <file leaf-file-name="test_init_domain.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_init_domain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="26" column="19" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="19" />
+            <state relative-caret-position="414">
+              <caret line="26" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="19" />
               <folding>
                 <element signature="e#31#49#0" expanded="true" />
               </folding>
@@ -61,7 +66,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pd_message.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pd_message.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pd_message.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="540">
@@ -87,19 +92,18 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/test/pd_message_test.py" />
-        <option value="$PROJECT_DIR$/src/core.py" />
         <option value="$PROJECT_DIR$/test/test_init_domain.py" />
         <option value="$PROJECT_DIR$/src/init_domain.py" />
         <option value="$PROJECT_DIR$/test/test_pd_message.py" />
         <option value="$PROJECT_DIR$/src/pd_message.py" />
+        <option value="$PROJECT_DIR$/src/core.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="2028" />
-    <option name="y" value="48" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="64" />
+    <option name="width" value="1857" />
+    <option name="height" value="1081" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -117,7 +121,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -140,6 +143,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -264,9 +268,9 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2028" y="48" width="1400" height="1000" extended-state="0" />
+    <frame x="64" y="0" width="1857" height="1081" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959569" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30204082" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -294,6 +298,44 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test/test_pd_message.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#31#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/init_domain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#48#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_init_domain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="26" column="19" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="19" />
+          <folding>
+            <element signature="e#31#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pd_message.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_pd_message.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -390,19 +432,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3168">
-          <caret line="176" column="4" lean-forward="false" selection-start-line="176" selection-start-column="4" selection-end-line="176" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_pd_message.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
+        <state relative-caret-position="360">
           <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="e#31#45#0" expanded="true" />
@@ -412,8 +444,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_init_domain.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="19" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="19" />
+        <state relative-caret-position="414">
+          <caret line="26" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="19" />
           <folding>
             <element signature="e#31#49#0" expanded="true" />
           </folding>
@@ -422,7 +454,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/init_domain.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
+        <state relative-caret-position="306">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="e#48#65#0" expanded="true" />
@@ -435,6 +467,16 @@
         <state relative-caret-position="540">
           <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

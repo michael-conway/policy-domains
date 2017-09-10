@@ -20,6 +20,12 @@ def pythonRuleEnginePluginTest(rule_args, callback, rei):
         f.write('\n')
         c = c + 1
 
+    f.write("rei stuff")
+    for member in rei:
+        f.write('\t')
+        f.write(str(member))
+        f.write('\n')
+
 
     callback.writeLine('serverLog', 'Printed to server log from python rule engine')
 
@@ -186,8 +192,8 @@ def acSetMultiReplPerResc(rule_args, callback, rei):
 
 
 def acPostProcForPut(rule_args, callback, rei):
-    # pythonRuleEnginePluginTest(rule_args, callback, rei)
-    pass
+    pythonRuleEnginePluginTest(rule_args, callback, rei)
+    #pass
 
 
 def acPostProcForCopy(rule_args, callback, rei):

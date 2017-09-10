@@ -3,7 +3,7 @@ import pd_message
 
 import logging
 
-logging.config.fileConfig("logging_config.ini")
+logging.config.fileConfig("/etc/irods/logging_config.ini")
 logger = logging.getLogger(__name__)
 
 def init_domain_exchanges(host, domain, exchanges):
