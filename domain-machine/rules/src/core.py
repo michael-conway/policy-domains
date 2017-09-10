@@ -1,6 +1,6 @@
 import datetime
 import json
-
+from ppretty import ppretty
 
 def writeStringToCharArray(s, char_array):
     for i in range(0, len(s)):
@@ -10,25 +10,16 @@ def writeStringToCharArray(s, char_array):
 def pythonRuleEnginePluginTest(rule_args, callback, rei):
     with open('/tmp/from_core_py.txt', 'a') as f:
         f.write(str(datetime.datetime.now()))
-    f.write('\n')
-    c = 0
-    for arg in rule_args:
-        f.write('\t')
-        f.write(str(c))
-        f.write(' : ')
-        f.write(str(arg))
-        f.write('\n')
-        c = c + 1
-
-    f.write("rei stuff")
-    for member in rei:
-        f.write('\t')
-        f.write(str(member))
-        f.write('\n')
+        f.write("\n dumping rule args\n")
+        f.write(ppretty(rule_args, indent='    ', width=40, seq_length=10,
+              show_protected=True, show_static=True, show_properties=True, show_address=True))
+        f.write("\nrei stuff:\n")
+        f.write(ppretty(rei, indent='    ', width=40, seq_length=10,
+              show_protected=True, show_static=True, show_properties=True, show_address=True))
+        f.flush()
 
 
     callback.writeLine('serverLog', 'Printed to server log from python rule engine')
-
 
 def acPreConnect(rule_args, callback, rei):
     rule_args[0] = 'CS_NEG_DONT_CARE'

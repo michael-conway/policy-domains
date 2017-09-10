@@ -4,7 +4,6 @@
     <list default="true" id="a4a42034-c008-4120-8c7d-4b8d4afba10d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core.py" afterPath="$PROJECT_DIR$/src/core.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/init_domain.py" afterPath="$PROJECT_DIR$/src/init_domain.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../ingest-domain/rules/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../ingest-domain/rules/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../ingest-domain/rules/src/core.py" afterPath="$PROJECT_DIR$/../../ingest-domain/rules/src/core.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../ingest-domain/rules/src/ingest_policy_domain.py" afterPath="$PROJECT_DIR$/../../ingest-domain/rules/src/ingest_policy_domain.py" />
@@ -21,7 +20,7 @@
       <file leaf-file-name="test_pd_message.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_pd_message.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="396">
               <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
                 <element signature="e#31#45#0" expanded="true" />
@@ -30,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="core.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="core.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/core.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="396">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -45,7 +44,7 @@
       <file leaf-file-name="init_domain.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/init_domain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="342">
               <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="e#48#65#0" expanded="true" />
@@ -54,14 +53,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_init_domain.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="logging_config.ini" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/logging_config.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_init_domain.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/test_init_domain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="26" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="19" />
-              <folding>
-                <element signature="e#31#49#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="36">
+              <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -69,9 +76,11 @@
       <file leaf-file-name="pd_message.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pd_message.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
+            <state relative-caret-position="594">
               <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-              <folding />
+              <folding>
+                <element signature="e#39#53#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -132,11 +141,6 @@
               <item name="rules" type="b2602c69:ProjectViewProjectNode" />
               <item name="rules" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rules" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rules" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -240,6 +244,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="a4a42034-c008-4120-8c7d-4b8d4afba10d" name="Default" comment="" />
@@ -248,6 +255,14 @@
       <option name="presentableId" value="Default" />
       <updated>1504441343346</updated>
     </task>
+    <task id="LOCAL-00001" summary="#1 test rei">
+      <created>1505065545156</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1505065545156</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -293,8 +308,14 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="#1 test rei" />
+    <option name="LAST_COMMIT_MESSAGE" value="#1 test rei" />
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -322,9 +343,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="26" column="19" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="19" />
-          <folding>
-            <element signature="e#31#49#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -332,7 +351,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-          <folding />
+          <folding>
+            <element signature="e#39#53#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -360,9 +381,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="18" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="7" selection-end-column="18" />
-          <folding>
-            <element signature="e#31#49#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -370,7 +389,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="14" column="24" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="14" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="e#39#53#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -408,9 +429,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="7" column="18" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="7" selection-end-column="18" />
-          <folding>
-            <element signature="e#31#49#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -418,7 +437,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="14" column="24" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="14" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="e#39#53#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -432,29 +453,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_pd_message.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="e#31#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_init_domain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="26" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="19" />
-          <folding>
-            <element signature="e#31#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/init_domain.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="342">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="e#48#65#0" expanded="true" />
@@ -462,21 +463,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pd_message.py">
+    <entry file="file://$PROJECT_DIR$/src/logging_config.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_pd_message.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="e#31#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="396">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pd_message.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+          <folding>
+            <element signature="e#39#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_init_domain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
