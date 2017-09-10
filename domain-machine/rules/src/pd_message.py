@@ -22,14 +22,23 @@ class PdMessage:
 
     def setup(self, domain, exchange, persistent="true"):
         """setup of queue/exchange"""
-        self.logger.info("setup()")
+        self.logger.info("setup(domain=%s, exchange=%s)" % (domain,exchange))
         if self.connection is None:
             self.logger.info("connecting...")
             self.connect(self.host)
+        definedExchange = ":".join([domain,exchange])
         channel = self.connection.channel()
-        channel.exchange_declare(exchange=(":".join([domain,exchange])),
+        channel.exchange_declare(exchange=domain,
                                  type='direct')
-        channel.queue_bind(exchange=":".join([domain,exchange]),
-                   queue=exchange,
-                   routing_key='exchange')
+        channel.queue_declare(queue=definedExchange,durable=True)
+        channel.queue_bind(exchange=domain,
+                   queue=definedExchange,
+                   routing_key=definedExchange)
 
+
+    def jsonizeRei(self, inputRei):
+        """turn rei structure into the transmission format"""
+        json.dump(inputRei)
+
+    def send(self, policyDomain, eventType, rei):
+        """send the serialized event data to the appropriate topic"""

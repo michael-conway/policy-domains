@@ -22,6 +22,12 @@ class PolicyDomainTest(unittest.TestCase):
         path = ipd.classify_path("/zone1/home/ingest/landing_zone")
         self.assertEquals("landing_zone", path)
 
+    def test_initialize(self):
+        """initialize the ingest policy domain"""
+        ipd = ingest_policy_domain.IngestPolicyDomain("localhost")
+        ipd.initialize_domain()
+        # add test assertions
+
 
 
 if __name__ == "__main__":

@@ -3,11 +3,11 @@
 import logging
 import init_domain
 
-
 class IngestPolicyDomain:
 
     def __init__(self, host="localhost"):
         self.logger = logging.getLogger(__name__)
+        self.host = host
         self.logger.info("initializing IngestPolicyDomain()")
 
     def initialize_domain(self):

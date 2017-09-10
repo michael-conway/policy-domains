@@ -1,15 +1,16 @@
 import datetime
 import json
-import ingest_policy_domain
-import pd_message
-import logging
 
+import logging
 
 from logging.config import fileConfig
 
-logging.config.fileConfig("logging_config.ini")
+logging.config.fileConfig("/etc/irods/logging_config.ini")
 logger = logging.getLogger(__name__)
 logger.info("Hi from ingest-core.py")
+
+import ingest_policy_domain
+import pd_message
 
 domain = "ingest"
 host = "localhost"
