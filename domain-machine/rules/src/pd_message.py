@@ -35,6 +35,8 @@ class PdMessage:
                    queue=definedExchange,
                    routing_key=definedExchange)
 
+    def close(self):
+        """close conn after operation"""
 
     def jsonizeRei(self, inputRei):
         """turn rei structure into the transmission format"""
@@ -50,6 +52,7 @@ class PdMessage:
         channel.basic_publish(exchange=domain,
                               routing_key=definedExchange,
                               body=self.jsonizeRei(rei))
+        self.close()
 
 
 

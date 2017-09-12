@@ -1,8 +1,7 @@
 import datetime
 import json
-
 import logging
-
+import pd_message
 from logging.config import fileConfig
 
 logging.config.fileConfig("/etc/irods/logging_config.ini")
@@ -190,9 +189,12 @@ def acSetMultiReplPerResc(rule_args, callback, rei):
 
 
 def acPostProcForPut(rule_args, callback, rei):
+    logging.info("acPostProcForPut %s" % rule_args)
     pythonRuleEnginePluginTest(rule_args, callback, rei)
-    logging.info("acPostProcForPut %s" %rule_args)
-    logging.info("rei: %s" % rei)
+    pdMessage = pd_message.PdMessage()
+    pdMessage.connect()
+    pdMessage.send(domain, "landing_zone", "acPostProcForPut", rei)
+
 
 
 def acPostProcForCopy(rule_args, callback, rei):
