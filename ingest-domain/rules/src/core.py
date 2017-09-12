@@ -191,8 +191,8 @@ def acSetMultiReplPerResc(rule_args, callback, rei):
 def acPostProcForPut(rule_args, callback, rei):
     logging.info("acPostProcForPut %s" % rule_args)
     pythonRuleEnginePluginTest(rule_args, callback, rei)
-    pdMessage = pd_message.PdMessage()
-    pdMessage.connect()
+    pdMessage = pd_message.PdMessage(host)
+    pdMessage.connect(host)
     pdMessage.send(domain, "landing_zone", "acPostProcForPut", rei)
 
 
