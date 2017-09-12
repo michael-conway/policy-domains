@@ -40,5 +40,16 @@ class PdMessage:
         """turn rei structure into the transmission format"""
         json.dump(inputRei)
 
-    def send(self, policyDomain, eventType, rei):
+    def send(self, domain, region, eventType, rei):
         """send the serialized event data to the appropriate topic"""
+        self.logger.info("sending to domain: %s" % domain)
+        self.logger.info("region: %s" % region)
+        self.logger.info("eventType: %s" % eventType)
+        definedExchange = ":".join([domain, region])
+        channel = self.connection.channel()
+        channel.basic_publish(exchange=domain,
+                              routing_key=definedExchange,
+                              body=self.jsonizeRei(rei))
+
+
+
