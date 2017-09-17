@@ -14,10 +14,10 @@ class PdMessage:
         self.connection = None
         self.host = host
 
-    def connect(self, host="localhost"):
+    def connect(self):
         """connect to the queue"""
-        self.logger.info("connecting to %s" % host)
-        self.connection = pika.BlockingConnection(pika.ConnectionParameters(host))
+        self.logger.info("connecting to %s" % self.host)
+        self.connection = pika.BlockingConnection(pika.ConnectionParameters(self.host))
         self.logger.info("connected!")
 
     def setup(self, domain, exchange, persistent="true"):
