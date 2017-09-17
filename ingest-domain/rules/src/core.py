@@ -204,7 +204,7 @@ def acPostProcForPut(rule_args, callback, rei):
     logging.info("acPostProcForPut %s" % rule_args)
     pythonRuleEnginePluginTest(rule_args, callback, rei)
     pdMessage = pd_message.PdMessage(host)
-    pdMessage.connect(host)
+    pdMessage.connect()
     pdMessage.send(domain, "landing_zone", "acPostProcForPut", rei)
 
 
