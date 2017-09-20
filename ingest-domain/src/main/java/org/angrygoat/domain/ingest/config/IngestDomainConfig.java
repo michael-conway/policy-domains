@@ -24,12 +24,14 @@ import org.springframework.statemachine.guard.Guard;
 
 @Configuration
 @EnableStateMachineFactory
+
 public class IngestDomainConfig extends StateMachineConfigurerAdapter<String, String> {
 
 	public static final Logger log = LoggerFactory.getLogger(IngestDomainConfig.class);
 
 	@Override
 	public void configure(StateMachineStateConfigurer<String, String> states) throws Exception {
+		log.info("configure(StateMachineStateConfigurer))");
 		states.withStates().initial(IngestStates.READY.toString())
 				.state(IngestStates.SIP_DEPOSITED_IN_ARCHIVE.toString())
 				.state(IngestStates.SIP_DEPOSITED_IN_ARCHIVE.toString(), sipDepositedAction())

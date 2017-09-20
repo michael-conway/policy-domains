@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.angrygoat.domainmachine;
+package org.angrygoat.domain.ingest.config;
 
 import java.util.Arrays;
 
@@ -12,6 +12,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.integration.annotation.IntegrationComponentScan;
+import org.springframework.integration.config.EnableIntegration;
 
 /**
  * Core domain machine application
@@ -20,6 +23,9 @@ import org.springframework.context.annotation.Bean;
  *
  */
 @SpringBootApplication
+@ComponentScan
+@EnableIntegration
+@IntegrationComponentScan
 
 public class Application {
 
