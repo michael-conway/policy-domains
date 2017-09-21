@@ -3,7 +3,7 @@
  */
 package org.angrygoat.domain.ingest.functionaltest;
 
-import org.angrygoat.domain.ingest.config.Application;
+import org.angrygoat.domain.ingest.Application;
 import org.angrygoat.domain.ingest.config.IngestDomainConfig;
 import org.angrygoat.domain.ingest.config.IngestStates;
 import org.angrygoat.domain.ingest.config.PolicyDomainContext;

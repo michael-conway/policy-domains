@@ -27,6 +27,7 @@ import org.springframework.stereotype.Component;
  *
  */
 @Component
+
 public class IngestLandingZoneMessageAdapter {
 
 	public static final Logger log = LoggerFactory.getLogger(IngestLandingZoneMessageAdapter.class);
@@ -42,6 +43,7 @@ public class IngestLandingZoneMessageAdapter {
 	@Bean
 	public AmqpInboundChannelAdapter inbound(SimpleMessageListenerContainer listenerContainer,
 			@Qualifier("ingestLandingZoneInputChannel") MessageChannel channel) {
+		log.info("inbound()");
 		AmqpInboundChannelAdapter adapter = new AmqpInboundChannelAdapter(listenerContainer);
 		adapter.setOutputChannel(channel);
 		return adapter;
@@ -49,6 +51,7 @@ public class IngestLandingZoneMessageAdapter {
 
 	@Bean
 	public SimpleMessageListenerContainer container(ConnectionFactory connectionFactory) {
+		log.info("container()");
 		SimpleMessageListenerContainer container = new SimpleMessageListenerContainer(connectionFactory);
 		container.setQueueNames("ingest:landing_zone");
 		container.setConcurrentConsumers(2);
@@ -59,6 +62,7 @@ public class IngestLandingZoneMessageAdapter {
 	@Bean
 	@ServiceActivator(inputChannel = "ingestLandingZoneInputChannel")
 	public MessageHandler handler() {
+		log.info("handler()");
 		return new MessageHandler() {
 
 			@Override
@@ -81,6 +85,7 @@ public class IngestLandingZoneMessageAdapter {
 	 *            the policyDomainContext to set
 	 */
 	public void setPolicyDomainContext(PolicyDomainContext policyDomainContext) {
+		log.info("setting policyDomainContext");
 		this.policyDomainContext = policyDomainContext;
 		log.info("set policy domain context");
 	}

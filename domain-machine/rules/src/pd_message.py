@@ -29,7 +29,7 @@ class PdMessage:
         definedExchange = ":".join([domain,exchange])
         channel = self.connection.channel()
         channel.exchange_declare(exchange=domain,
-                                 type='direct')
+                                 exchange_type='direct')
         channel.queue_declare(queue=definedExchange,durable=True)
         channel.queue_bind(exchange=domain,
                    queue=definedExchange,
