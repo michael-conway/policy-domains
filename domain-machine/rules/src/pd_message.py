@@ -38,10 +38,6 @@ class PdMessage:
     def close(self):
         """close conn after operation"""
 
-    def jsonizeRei(self, inputRei):
-        """turn rei structure into the transmission format"""
-        json.dump(inputRei)
-
     def send(self, domain, region, eventType, rei):
         """send the serialized event data to the appropriate topic"""
         self.logger.info("sending to domain: %s" % domain)

@@ -1,4 +1,5 @@
 import datetime
+import session_vars
 import json
 import logging
 import pd_message
@@ -27,16 +28,9 @@ def pythonRuleEnginePluginTest(rule_args, callback, rei):
         logger.debug(str(c) + ":" + str(arg))
         c = c + 1
 
-
     logging.info("rei:")
-    logging.info(dir(rei))
-    logging.info("doi:")
-    logging.info(dir(rei.doi))
-    logging.info("doinp:")
-    logging.info(dir(rei.doinp))
-    logging.info("uoic:")
-    logging.info(dir(rei.uoic))
-
+    sv = session_vars.get_map(rei)
+    logging.info("svs:%s" % sv)
 
 
 def acPreConnect(rule_args, callback, rei):
