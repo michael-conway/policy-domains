@@ -3,9 +3,14 @@
  */
 package org.angrygoat.domain.ingest.messaging;
 
+import java.io.IOException;
+
 import org.angrygoat.domain.ingest.config.PolicyDomainContext;
+import org.angrygoat.domainmachine.exception.PolicyDomainException;
+import org.angrygoat.domainmachine.exception.PolicyDomainRuntimeException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.amqp.core.MessageBuilder;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +24,10 @@ import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.MessageHandler;
 import org.springframework.messaging.MessagingException;
 import org.springframework.stereotype.Component;
+
+import com.fasterxml.jackson.core.JsonFactory;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonToken;
 
 /**
  * Adapter that processes inbound landing zone messages
@@ -67,7 +76,26 @@ public class IngestLandingZoneMessageAdapter {
 
 			@Override
 			public void handleMessage(Message<?> message) throws MessagingException {
-				log.info("ingest:landing_zone message: {}", message.getPayload().toString());
+				log.info("ingest:landing_zone message: {}",  message.getPayload().toString());
+				String payStr = new String((byte[]) message.getPayload());
+				log.info("paystr:{}", payStr);
+				JsonFactory factory = new JsonFactory();
+				JsonParser parser;
+				try {
+					parser = factory.createParser(payStr);
+					while(!parser.isClosed()){
+					    JsonToken jsonToken;
+							jsonToken = parser.nextToken();
+						
+
+					    log.info("jsonToken = " + jsonToken);
+					}
+				} catch (IOException e1) {
+					log.error("io exception parsing",e1 );
+					throw new PolicyDomainRuntimeException(e1);
+				} 
+
+				
 			}
 
 		};

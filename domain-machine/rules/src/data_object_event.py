@@ -7,8 +7,12 @@ class DataObjectEvent():
         self.event = event
         sv = session_vars.get_map(rei)
         self.filePath = sv['data_object']['object_path']
-        self.clientUser = sv['client_user']
+        self.clientUser = sv['client_user']['user_name']
+        self.zone = sv['client_user']['irods_zone']
 
     def toJSON(self):
-        return json.dumps(self, default=lambda o: o.__dict__,
+
+        outobj = {"filePath":self.filePath, "clientUser": self.clientUser, "zone": self.zone}
+
+        return json.dumps(outobj,
                           sort_keys=True, indent=4)
