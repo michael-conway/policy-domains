@@ -12,7 +12,7 @@ class DataObjectEvent():
 
     def toJSON(self):
 
-        outobj = {"filePath":self.filePath, "clientUser": self.clientUser, "zone": self.zone}
+        outobj = {"filePath":self.filePath, "clientUser": self.clientUser, "zone": self.zone, "event": self.event}
 
         return json.dumps(outobj,
                           sort_keys=True, indent=4)

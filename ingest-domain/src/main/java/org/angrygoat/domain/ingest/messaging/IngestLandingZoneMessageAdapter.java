@@ -6,6 +6,7 @@ package org.angrygoat.domain.ingest.messaging;
 import java.io.IOException;
 
 import org.angrygoat.domain.ingest.config.PolicyDomainContext;
+import org.angrygoat.domainmachine.domain.DataObjectEvent;
 import org.angrygoat.domainmachine.exception.PolicyDomainException;
 import org.angrygoat.domainmachine.exception.PolicyDomainRuntimeException;
 import org.slf4j.Logger;
@@ -28,6 +29,7 @@ import org.springframework.stereotype.Component;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * Adapter that processes inbound landing zone messages
@@ -79,21 +81,14 @@ public class IngestLandingZoneMessageAdapter {
 				log.info("ingest:landing_zone message: {}",  message.getPayload().toString());
 				String payStr = new String((byte[]) message.getPayload());
 				log.info("paystr:{}", payStr);
-				JsonFactory factory = new JsonFactory();
-				JsonParser parser;
+				ObjectMapper objectMapper = new ObjectMapper();
 				try {
-					parser = factory.createParser(payStr);
-					while(!parser.isClosed()){
-					    JsonToken jsonToken;
-							jsonToken = parser.nextToken();
-						
-
-					    log.info("jsonToken = " + jsonToken);
-					}
-				} catch (IOException e1) {
-					log.error("io exception parsing",e1 );
-					throw new PolicyDomainRuntimeException(e1);
-				} 
+					DataObjectEvent doe = objectMapper.readValue(payStr, DataObjectEvent.class);
+					log.info("data object event:{}", doe);
+				} catch (IOException e) {
+					log.error("exception converting event", e);
+					throw new PolicyDomainRuntimeException("cannot convert data object event", e);
+				}
 
 				
 			}
