@@ -5,13 +5,12 @@ package org.angrygoat.domain.ingest.messaging;
 
 import java.io.IOException;
 
+import org.angrygoat.domain.ingest.config.IngestEvents;
 import org.angrygoat.domain.ingest.config.PolicyDomainContext;
 import org.angrygoat.domainmachine.domain.DataObjectEvent;
-import org.angrygoat.domainmachine.exception.PolicyDomainException;
 import org.angrygoat.domainmachine.exception.PolicyDomainRuntimeException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.amqp.core.MessageBuilder;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,15 +19,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter;
 import org.springframework.integration.annotation.ServiceActivator;
 import org.springframework.integration.channel.DirectChannel;
+import org.springframework.integration.support.MessageBuilder;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.MessageHandler;
 import org.springframework.messaging.MessagingException;
 import org.springframework.stereotype.Component;
 
-import com.fasterxml.jackson.core.JsonFactory;
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.core.JsonToken;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
@@ -85,12 +82,17 @@ public class IngestLandingZoneMessageAdapter {
 				try {
 					DataObjectEvent doe = objectMapper.readValue(payStr, DataObjectEvent.class);
 					log.info("data object event:{}", doe);
+					
+					 Message<String> smMessage = MessageBuilder
+					            .withPayload(IngestEvents.DEPOSIT_SIP_IN_LANDING_AREA.toString())
+					            .setHeader("foo", "bar")
+					            .build();
+					    policyDomainContext.getStateMachine().sendEvent(smMessage);
+						
 				} catch (IOException e) {
 					log.error("exception converting event", e);
 					throw new PolicyDomainRuntimeException("cannot convert data object event", e);
 				}
-
-				
 			}
 
 		};
