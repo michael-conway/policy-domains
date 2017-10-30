@@ -7,7 +7,7 @@ import ingest_policy_domain
 
 from logging.config import fileConfig
 
-logging.config.fileConfig("logging_config.ini")
+logging.config.fileConfig("/etc/irods/logging_config.ini")
 logger = logging.getLogger(__name__)
 logger.info("Hi from test_policy_domain.py")
 

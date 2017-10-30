@@ -5,7 +5,7 @@ import init_domain
 
 class IngestPolicyDomain:
 
-    def __init__(self, host="localhost"):
+    def __init__(self, host="irods421.irodslocal"):
         self.logger = logging.getLogger(__name__)
         self.host = host
         self.logger.info("initializing IngestPolicyDomain()")
@@ -37,5 +37,5 @@ class IngestPolicyDomain:
         raise LookupError("Cannot resolve path %s" % path)
 
 if __name__ == '__main__':
-    ipd = IngestPolicyDomain()
-    ipd.initialize_domain("localhost")
+    ipd = IngestPolicyDomain("irods421.irodslocal")
+    ipd.initialize_domain()

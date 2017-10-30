@@ -1,4 +1,5 @@
 import datetime
+import session_vars
 import json
 import logging
 import pd_message
@@ -26,6 +27,11 @@ def pythonRuleEnginePluginTest(rule_args, callback, rei):
 
         logger.debug(str(c) + ":" + str(arg))
         c = c + 1
+
+    logging.info("rei:")
+    sv = session_vars.get_map(rei)
+    logging.info("svs:%s" % sv)
+
 
 def acPreConnect(rule_args, callback, rei):
     rule_args[0] = 'CS_NEG_DONT_CARE'
@@ -192,7 +198,7 @@ def acPostProcForPut(rule_args, callback, rei):
     logging.info("acPostProcForPut %s" % rule_args)
     pythonRuleEnginePluginTest(rule_args, callback, rei)
     pdMessage = pd_message.PdMessage(host)
-    pdMessage.connect(host)
+    pdMessage.connect()
     pdMessage.send(domain, "landing_zone", "acPostProcForPut", rei)
 
 

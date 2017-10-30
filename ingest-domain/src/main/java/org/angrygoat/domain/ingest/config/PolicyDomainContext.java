@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.angrygoat.domainmachine;
+package org.angrygoat.domain.ingest.config;
 
 import javax.annotation.PostConstruct;
 
