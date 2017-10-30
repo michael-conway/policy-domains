@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4a42034-c008-4120-8c7d-4b8d4afba10d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../ingest-domain/rules/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../ingest-domain/rules/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../ingest-domain/rules/src/core.py" afterPath="$PROJECT_DIR$/../../ingest-domain/rules/src/core.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../ingest-domain/rules/src/logging_config.ini" afterPath="$PROJECT_DIR$/../../ingest-domain/rules/src/logging_config.ini" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -108,8 +107,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1838" />
-    <option name="y" value="34" />
+    <option name="x" value="3938" />
+    <option name="y" value="331" />
     <option name="width" value="1393" />
     <option name="height" value="792" />
   </component>
@@ -294,8 +293,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1838" y="34" width="1393" height="792" extended-state="0" />
-    <editor active="true" />
+    <frame x="3938" y="331" width="1393" height="792" extended-state="0" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27102804" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
